@@ -25,14 +25,18 @@ class SortedList {
       throw new Error('EmptySortedList');
     } else {
       return Math.max.apply(Math, this.items);
+      // or:
+      // return this.items[this.length -1];
     }
   }
 
   min() {
-    if (this.items.length === 0) {
+    if (!this.length /*this.items.length === 0*/) {
       throw new Error('EmptySortedList');
     } else {
       return Math.min.apply(Math, this.items);
+      // or:
+      // return this.items[0];
     }
   }
 
